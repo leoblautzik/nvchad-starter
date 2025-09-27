@@ -9,12 +9,12 @@ local M = {}
 
 M.base46 = {
   theme = "chadracula-evondev",
-  transparency = true,
+  transparency = false,
 
-  -- hl_override = {
-  -- 	Comment = { italic = true },
-  -- 	["@comment"] = { italic = true },
-  -- },
+  hl_override = {
+    Comment = { italic = true },
+    ["@comment"] = { italic = true },
+  },
 }
 M.plugins = {
   override = {
@@ -23,7 +23,7 @@ M.plugins = {
         -- Estilo de borde
         borderchars = { "╭", "╮", "╯", "╰", "─", "│", "─", "│" }, -- redondeado
         layout_config = {
-          prompt_position = "top",
+          prompt_position = "bottom",
         },
         sorting_strategy = "ascending",
       },
@@ -35,6 +35,10 @@ M.nvdash = { load_on_startup = true }
 M.ui = {
   tabufline = {
     lazyload = false,
+  },
+  statusline = {
+    theme = "default",
+    separator_style = "round",
   },
 }
 
