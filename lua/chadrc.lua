@@ -4,42 +4,29 @@
 
 ---@type ChadrcConfig
 ---@class MyChadrcConfig
-
 local M = {}
 
 M.base46 = {
-  theme = "chadracula-evondev",
-  transparency = false,
+    theme = "chadracula-evondev",
+    -- transparency = true,
 
-  hl_override = {
-    Comment = { italic = true },
-    ["@comment"] = { italic = true },
-  },
-}
-M.plugins = {
-  override = {
-    ["nvim-telescope/telescope.nvim"] = {
-      defaults = {
-        -- Estilo de borde
-        borderchars = { "╭", "╮", "╯", "╰", "─", "│", "─", "│" }, -- redondeado
-        layout_config = {
-          prompt_position = "bottom",
-        },
-        sorting_strategy = "ascending",
-      },
+    hl_override = {
+        Comment = { italic = true },
+        ["@comment"] = { italic = true },
     },
-  },
 }
+M.plugins = {}
 
 M.nvdash = { load_on_startup = true }
 M.ui = {
-  tabufline = {
-    lazyload = false,
-  },
-  statusline = {
-    theme = "default",
-    separator_style = "round",
-  },
+    tabufline = {
+        lazyload = false,
+    },
+    statusline = {
+        theme = "default",
+        separator_style = "round",
+    },
+    telescope = { style = "bordered" }, -- borderless / bordered
 }
 
 return M

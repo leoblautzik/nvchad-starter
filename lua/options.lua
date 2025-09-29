@@ -4,6 +4,7 @@ require "nvchad.options"
 
 local o = vim.o
 o.cursorlineopt = "both" -- to enable cursorline!
+o.swapfile = false
 -- Save undo history
 o.undofile = true
 -- definir el directorio donde se van a guardar los archivos de undo
